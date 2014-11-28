@@ -9,9 +9,9 @@ keep(x = c())
 \item{x}{A character vector of variables which you wish to keep}
 }
 \description{
-The Keep Function
+This function is designed to keep a given list of variables (as opposed to the rm function, which is designed to remove a list of variables)
 }
 \details{
-This function is designed to keep a given list of variables (as opposed to the rm function, which is designed to remove a list of variables)
+The function uses the \code{ls} command to find the variables that are defined in the global environment. It then deletes all variables that are not given as an argument. It does not delete itself
 }
 
