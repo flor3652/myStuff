@@ -22,21 +22,21 @@ keep <- function(x = c()){
 
 
 #### Testing ----
-# works 
-for(i in 1:26) assign(letters[i],i)
-ls()
-keep(c("a","b"))
-ls()
-
-# numerics throw an error (they would "work", but it wouldn't keep anything)
-keep(1)
-ls()
-
-# takes single character input (if you just want to keep the one item)
-for(i in 1:26) assign(letters[i],i)
-ls()
-keep("a")
-ls()
+# # works 
+# for(i in 1:26) assign(letters[i],i)
+# ls()
+# keep(c("a","b"))
+# ls()
+# 
+# # numerics throw an error (they would "work", but it wouldn't keep anything)
+# keep(1)
+# ls()
+# 
+# # takes single character input (if you just want to keep the one item)
+# for(i in 1:26) assign(letters[i],i)
+# ls()
+# keep("a")
+# ls()
 
 
 
