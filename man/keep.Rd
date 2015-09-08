@@ -15,7 +15,7 @@ keep(..., x = c())
 This function is designed to keep a given list of variables (as opposed to the rm function, which is designed to remove a list of variables)
 }
 \details{
-The function uses the \code{ls} command to find the variables that are defined in the global environment. It then deletes all variables that are not given as an argument.
+The function uses the \code{ls} command to find the variables that are defined in the parent environment. It then deletes all variables that are not given as an argument.
 }
 \author{
 Michael Floren
