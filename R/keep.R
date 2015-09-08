@@ -12,7 +12,7 @@
 #' @author Michael Floren
 #' 
 #  For whatever reason, I CANNOT get this link to the "rm" function to actually create a hyperlink
-#' @seealso \code{\link{rm}}
+#' @seealso \code{\link[base]{rm}}
 #' 
 
 
