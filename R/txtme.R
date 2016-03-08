@@ -17,9 +17,9 @@
 #' 
 #' @details This fuunction uses the memoise package to store passwords as variables in the global environment. This may or may not be desireable, but was deemed most appropriate of potential options. Please see the memoise documentation for details on this storage (read: due to my ignorance, I really don't know). Note that, due to trial and error, passwords should be saved even if console is closed (likely saved in workspace). Again, this may be undesireable if \code{keeptime} is set to "forever", so it is recommended to build in password resets into chunks using this function if using code{keeptime="forever"}. 
 #' 
-#' The texting is truly done through sending an e-mail to a cell-phone's e-mail address: number@carrierinfo.blah... For those looking to change the carrier, please visit the following website to find your carrier's information: \link[http://www.emailtextmessages.com/]{http://www.emailtextmessages.com/}
+#' The texting is truly done through sending an e-mail to a cell-phone's e-mail address: number@carrierinfo.blah... For those looking to change the carrier, please visit the following website to find your carrier's information: http://www.emailtextmessages.com/
 #' 
-#' @seealso \code{\link[memoise]{memoise}}, \code{\link[mailR]{mailR}}
+#' @seealso \code{\link[memoise]{memoise}}, \code{mailR}
 #' 
 #' @author Michael Floren
 #' 
