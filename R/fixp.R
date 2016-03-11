@@ -10,6 +10,13 @@
 #' 
 #' @details Thus function expects summary tables (and turns them into a data.frame). It assumes that the last column of the table contains p-values (with the name Pr..., normal in many summary tables). It will shoot a warning letting you know if you are using the function with a table that doesn't have a name that starts with this for the last column, though it will still run. The function takes the data frame and manipulates all values that round to 0 (at the set digits) to instead display that the p-value is less than the current rounded digits outcome. Note that this makes the last column of the output dataframe either character or numeric.
 #' 
+#' @examples 
+#' #this gives a summary table with a small p-value
+#' (mod <- coef(summary(lm(uptake ~ conc + Treatment + Type + Plant, data=CO2))))
+#' 
+#' #this fixes the p-value to 2 digits, correctly reporting p-values that would have been rounded to 0
+#' fixp(mod,dig=2)
+#' 
 #' @author Michael Floren
 
 fixp <- function(x, dig=3){
@@ -20,7 +27,7 @@ fixp <- function(x, dig=3){
   x[,ncol(x)] <- round(x[,ncol(x)], dig)
   for(i in 1:nrow(x)){
     if(x[i,ncol(x)] == 0)
-      x[i,ncol(x)] <- paste0("p < .", paste0(rep(0,dig-1), collapse=""), "1")
+      x[i,ncol(x)] <- paste0("< .", paste0(rep(0,dig-1), collapse=""), "1")
   }
   
   x
