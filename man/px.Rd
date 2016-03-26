@@ -4,8 +4,7 @@
 \alias{px}
 \title{Print X-Table}
 \usage{
-px(x, cap = NULL, lab = NULL, dig = 2, rn = FALSE, cn = TRUE,
-  scale = "1")
+px(x, cap = NULL, lab = NULL, rn = FALSE, cn = TRUE, scale = "1", ...)
 }
 \arguments{
 \item{x}{The table to be written to LaTeX}
@@ -14,13 +13,13 @@ px(x, cap = NULL, lab = NULL, dig = 2, rn = FALSE, cn = TRUE,
 
 \item{lab}{The label to be assigned}
 
-\item{dig}{The digits to round to}
-
 \item{rn}{Logical. Do you wish to print row names?}
 
 \item{cn}{Logical. Do you wish to print column names?}
 
 \item{scale}{A scaling factor (smaller scale = smaller text)}
+
+\item{...}{Additional arguments (passed to xtable and print.xtable)}
 }
 \description{
 This function is intended to be a wrapper for printing xtables with some common options that I normally use and change. This provides no unique or creative commands, and is simply used for convenience.

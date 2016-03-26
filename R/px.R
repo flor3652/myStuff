@@ -7,10 +7,10 @@
 #' @param x The table to be written to LaTeX
 #' @param cap The caption of the table
 #' @param lab The label to be assigned
-#' @param dig The digits to round to
 #' @param rn Logical. Do you wish to print row names?
 #' @param cn Logical. Do you wish to print column names?
 #' @param scale A scaling factor (smaller scale = smaller text)
+#' @param ... Additional arguments (passed to xtable and print.xtable)
 #' 
 #' @details Again, just combining print.xtable into one short function with some convenient defaults for my use.
 #' 
@@ -21,7 +21,7 @@
 #' 
 #' 
 
-px <- function(x, cap=NULL, lab=NULL, dig=2, rn=FALSE, cn=TRUE, scale="1"){ 
+px <- function(x, cap=NULL, lab=NULL, rn=FALSE, cn=TRUE, scale="1", ...){ 
   require(xtable) 
-  print(xtable(x, caption=cap, label=lab, digits=dig), include.rownames=rn, include.colnames=cn, scalebox=scale)
+  print(xtable(x, caption=cap, label=lab, digits=dig, ...), include.rownames=rn, include.colnames=cn, scalebox=scale, ...)
 }
