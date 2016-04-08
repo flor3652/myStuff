@@ -23,5 +23,5 @@
 
 px <- function(x, cap=NULL, lab=NULL, rn=FALSE, cn=TRUE, scale="1", ...){ 
   require(xtable) 
-  print(xtable(x, caption=cap, label=lab, digits=dig, ...), include.rownames=rn, include.colnames=cn, scalebox=scale, ...)
+  print(xtable(x, caption=cap, label=lab, ...), include.rownames=rn, include.colnames=cn, scalebox=scale, ...)
 }
