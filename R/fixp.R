@@ -14,12 +14,12 @@
 #' #this gives a summary table with a small p-value
 #' (mod <- coef(summary(lm(uptake ~ conc + Treatment + Type + Plant, data=CO2))))
 #' 
-#' #this fixes the p-value to 2 digits, correctly reporting p-values that would have been rounded to 0
-#' fixp(mod,dig=2)
+#' #this fixes the p-value to 4 digits, correctly reporting p-values that would have been rounded to 0
+#' fixp(mod,dig=4)
 #' 
 #' @author Michael Floren
 
-fixp <- function(x, dig=3){
+fixp <- function(x, dig=2){
   x <- as.data.frame(x)
   
   if(substr(names(x)[ncol(x)],1,2) != "Pr")

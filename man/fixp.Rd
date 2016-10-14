@@ -4,7 +4,7 @@
 \alias{fixp}
 \title{Fix P-Values}
 \usage{
-fixp(x, dig = 3)
+fixp(x, dig = 2)
 }
 \arguments{
 \item{x}{The summary table to "fix" the p-values for}
@@ -21,8 +21,8 @@ Thus function expects summary tables (and turns them into a data.frame). It assu
 #this gives a summary table with a small p-value
 (mod <- coef(summary(lm(uptake ~ conc + Treatment + Type + Plant, data=CO2))))
 
-#this fixes the p-value to 2 digits, correctly reporting p-values that would have been rounded to 0
-fixp(mod,dig=2)
+#this fixes the p-value to 4 digits, correctly reporting p-values that would have been rounded to 0
+fixp(mod,dig=4)
 
 }
 \author{
