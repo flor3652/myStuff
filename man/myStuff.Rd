@@ -6,8 +6,6 @@
 \alias{myStuff-package}
 \title{My Stuff}
 \arguments{
-\item{set_param}{This function can be used to set global statistical parameters from all in one place. When given N, n, and alpha, it will set those as global parameters as well as calculating z-scores and t-scores for the given population.}
-
 \item{keep}{The keep function was designed to work in much the same was as rm, save to keep objects as opposed to removing them.}
 
 \item{grab}{The grab function is designed to be a face version of library, simply attempting to download packages that aren't already downloaded.}
@@ -15,8 +13,6 @@
 \item{fixp}{This function takes a summary table and fixes the p-values to be reportable (not listing 0's)}
 
 \item{px}{This function simply places some nice defaults on print.xtable}
-
-\item{txtme}{This function sends a text-message to the user from a G-Mail account, storing the users password for a set amount of time.}
 }
 \description{
 This is a package that contains some useful functions that were originally created for me and my personal needs.
