@@ -19,16 +19,17 @@
 #' 
 #' @author Michael Floren
 
-fixp <- function(x, dig=2){
-  x <- as.data.frame(x)
-  
-  if(substr(names(x)[ncol(x)],1,2) != "Pr")
-    warning("The name of the last column didn't start with Pr. This may indicate that p-values weren't in the last row, and thus, that this function is inappropriate.")
-  x[,ncol(x)] <- round(x[,ncol(x)], dig)
-  for(i in 1:nrow(x)){
-    if(x[i,ncol(x)] == 0)
-      x[i,ncol(x)] <- paste0("< .", paste0(rep(0,dig-1), collapse=""), "1")
+fixp <- function(x, dig=2)
+  {
+    x <- as.data.frame(x)
+    if (substr(names(x)[ncol(x)], 1, 2) != "Pr") 
+      warning("The name of the last column didn't start with Pr. This may indicate that p-values weren't in the last row, and thus, that this function is inappropriate.")
+    x[, ncol(x)] <- round(x[, ncol(x)], dig)
+    for (i in 1:nrow(x)) {
+      if(is.na(x[i,ncol(x)])){
+        x[i, ncol(x)] <- NA
+      } else if (x[i, ncol(x)] == 0) 
+        x[i, ncol(x)] <- paste0("< .", paste0(rep(0, dig - 1), collapse = ""), "1")
+    }
+    x
   }
-  
-  x
-}
