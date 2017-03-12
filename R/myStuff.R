@@ -15,6 +15,7 @@
 #' @param grab The grab function is designed to be a face version of library, simply attempting to download packages that aren't already downloaded.
 #' @param fixp This function takes a summary table and fixes the p-values to be reportable (not listing 0's)
 #' @param px This function simply places some nice defaults on print.xtable
+#' @param dpsl This function combined dput and select.list, changing a few defaults, to give a graphical interface for column and row selection.
 #' 
 #' @details
 #' As a side note, the \code{keep} function was designed out of several projects I had where I moved quickly between them. I wanted to clear the workspace to avoid naming confusion, but I also wanted several variables to be left alone. \code{keep} can remove all variables from the workspace other than the ones listed

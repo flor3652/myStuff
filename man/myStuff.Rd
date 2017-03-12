@@ -13,6 +13,8 @@
 \item{fixp}{This function takes a summary table and fixes the p-values to be reportable (not listing 0's)}
 
 \item{px}{This function simply places some nice defaults on print.xtable}
+
+\item{dpsl}{This function combined dput and select.list, changing a few defaults, to give a graphical interface for column and row selection.}
 }
 \description{
 This is a package that contains some useful functions that were originally created for me and my personal needs.
