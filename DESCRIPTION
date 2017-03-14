@@ -4,9 +4,9 @@ Version: 0.4
 Authors@R: as.person("Michael Floren <michael.floren@unco.edu> [aut, cre]")
 Description: Loads as set of useful functions
 Depends:
-    xtable,
     utils,
     R (>= 3.1.1)
+Imports: xtable
 License: LICENSE
 LazyData: true
 RoxygenNote: 5.0.1

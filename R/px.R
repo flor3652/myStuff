@@ -25,5 +25,5 @@ px <- function(x, cap=NULL, lab=NULL, rn=FALSE, cn=TRUE, scale="1", ...){
   if(!is.null(lab))
     if(substr(lab,1,4) != "tab:") #for compatability
       lab <- paste0("tab:", lab) #auto add "tab:" (like knitr does)
-  print(xtable(x, caption=cap, label=lab, ...), include.rownames=rn, include.colnames=cn, scalebox=scale, ...)
+  print(xtable::xtable(x, caption=cap, label=lab, ...), include.rownames=rn, include.colnames=cn, scalebox=scale, ...)
 }
