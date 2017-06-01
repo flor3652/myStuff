@@ -28,4 +28,3 @@ fixp(mod,dig=4)
 \author{
 Michael Floren
 }
-

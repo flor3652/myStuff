@@ -7,6 +7,7 @@
 #' @param ind The index of names that should be used: 1/'row" for rownames, 2/'col' for column names
 #' @param multiple Passed to select.list: should multiple entries be used?
 #' @param graphics Passed to select.list: should graphics be used?
+#' @param quotes Do you want quotes around each element? Defaults to FALSE.
 #' @param ... Passed to select.list
 #' 
 #' @details
@@ -29,11 +30,17 @@
 
 #looks good for a first draft...
 
-dpsl <- function(df, ind = "col", multiple =TRUE, graphics=TRUE,...){
+dpsl <- function(df, ind = "col", multiple =TRUE, graphics=TRUE, quotes=TRUE, ...){
+  if(quotes){ #if you want quotes
+    tf <- function(x) dput(select.list(x, multiple=multiple, graphics=graphics, ...))
+  } else if (!quotes) {
+    tf <- function(x) print(paste0("c(",paste(select.list(x, multiple=multiple, graphics=graphics, ...), collapse=", "), ")"))
+  }
+  
   if(ind==2 | ind=="col"){
-    out <- dput(select.list(colnames(df), multiple=multiple, graphics=graphics, ...))
+    out <- tf(colnames(df))
   } else if (ind == 1 | ind == "row"){
-    out <- dput(select.list(rownames(df), multiple=multiple, graphics=graphics, ...))
+    out <- tf(rownames(df))
   } else{
     stop("Index value is invalid. Please give 1, 2, 'row', or 'col'")
   }

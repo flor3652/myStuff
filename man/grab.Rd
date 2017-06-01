@@ -19,10 +19,9 @@ This function is designed to be used in place of library and install.packages. I
 \details{
 The function uses the logical output from \code{require} to determine if the package exists locally. If it does, the package is then loaded using \code{library}. If not, the function tries do download the package using \code{install.packages}, checks to make sure it downloaded, then loads the package.
 }
-\author{
-Michael Floren
-}
 \seealso{
 \code{\link[base]{install.packages}, \code{\link[base]{require}}, \code{\link[base]{library}}}
 }
-
+\author{
+Michael Floren
+}

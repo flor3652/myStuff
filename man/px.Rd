@@ -29,10 +29,9 @@ px Version 0.1
 
 Again, just combining print.xtable into one short function with some convenient defaults for my use.
 }
-\author{
-Michael Floren
-}
 \seealso{
 \code{\link[xtable]{print.xtable}}
 }
-
+\author{
+Michael Floren
+}

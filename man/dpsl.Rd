@@ -4,7 +4,8 @@
 \alias{dpsl}
 \title{Dput Select.list Shortcut}
 \usage{
-dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, ...)
+dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, quotes = TRUE,
+  ...)
 }
 \arguments{
 \item{df}{The data frame that the list should come from}
@@ -14,6 +15,8 @@ dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, ...)
 \item{multiple}{Passed to select.list: should multiple entries be used?}
 
 \item{graphics}{Passed to select.list: should graphics be used?}
+
+\item{quotes}{Do you want quotes around each element? Defaults to FALSE.}
 
 \item{...}{Passed to select.list}
 }
@@ -34,10 +37,9 @@ dpsl(iris, ind="row") #could also use dpsl(iris, ind=1
 iris[,dpsl(iris)]
 
 }
-\author{
-Michael Floren
-}
 \seealso{
 \code{\link[base]{dput}, \code{\link[utils]{select.list}}}
 }
-
+\author{
+Michael Floren
+}

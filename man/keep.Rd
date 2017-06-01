@@ -17,10 +17,9 @@ This function is designed to keep a given list of variables (as opposed to the r
 \details{
 The function uses the \code{ls} command to find the variables that are defined in the parent environment. It then deletes all variables that are not given as an argument.
 }
-\author{
-Michael Floren
-}
 \seealso{
 \code{\link[base]{rm}}
 }
-
+\author{
+Michael Floren
+}

@@ -22,4 +22,3 @@ This is a package that contains some useful functions that were originally creat
 \details{
 As a side note, the \code{keep} function was designed out of several projects I had where I moved quickly between them. I wanted to clear the workspace to avoid naming confusion, but I also wanted several variables to be left alone. \code{keep} can remove all variables from the workspace other than the ones listed
 }
-
