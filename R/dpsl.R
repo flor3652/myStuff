@@ -41,6 +41,8 @@ dpsl <- function(df, ind = "col", multiple =TRUE, graphics=TRUE, quotes=TRUE, ..
     out <- tf(colnames(df))
   } else if (ind == 1 | ind == "row"){
     out <- tf(rownames(df))
+  } else if(ind == 3 | ind == "raw"){
+    out <- tf(df)
   } else{
     stop("Index value is invalid. Please give 1, 2, 'row', or 'col'")
   }
