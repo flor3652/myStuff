@@ -5,9 +5,9 @@
 #' 
 #' @param df The data frame that the list should come from
 #' @param ind The index of names that should be used: 1/'row" for rownames, 2/'col' for column names
-#' @param multiple Passed to select.list: should multiple entries be used?
-#' @param graphics Passed to select.list: should graphics be used?
-#' @param quotes Do you want quotes around each element? Defaults to FALSE.
+#' @param multiple Passed to select.list: should multiple entries be used? Defaults to TRUE.
+#' @param graphics Passed to select.list: should graphics be used? Defaults to TRUE.
+#' @param quotes Do you want quotes around each element? Defaults to TRUE.
 #' @param ... Passed to select.list
 #' 
 #' @details

@@ -12,11 +12,11 @@ dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, quotes = TRUE,
 
 \item{ind}{The index of names that should be used: 1/'row" for rownames, 2/'col' for column names}
 
-\item{multiple}{Passed to select.list: should multiple entries be used?}
+\item{multiple}{Passed to select.list: should multiple entries be used? Defaults to TRUE.}
 
-\item{graphics}{Passed to select.list: should graphics be used?}
+\item{graphics}{Passed to select.list: should graphics be used? Defaults to TRUE.}
 
-\item{quotes}{Do you want quotes around each element? Defaults to FALSE.}
+\item{quotes}{Do you want quotes around each element? Defaults to TRUE.}
 
 \item{...}{Passed to select.list}
 }
