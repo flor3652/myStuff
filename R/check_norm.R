@@ -16,7 +16,7 @@ check_norm <- function(resid, grid=3){
   distractors <- list()
   for(i in 1:grid^2){
     if(i!=loc_of_real_data){
-      distractors[[i]] <- rnorm(length(resid)) #saving these for the "reveal" plot
+      distractors[[i]] <- rnorm(length(resid), mean=mean(resid), sd=sd(resid)) #saving these for the "reveal" plot
       qqnorm(distractors[[i]])
     } else if(i==loc_of_real_data)
       qqnorm(resid)
