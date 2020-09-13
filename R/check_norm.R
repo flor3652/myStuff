@@ -10,7 +10,7 @@
 #' 
 #' @author Michael Floren
 check_norm <- function(resid, grid=3){
-  par(mfrow=c(grid, grid)) #create grid^2 plots: grid^2-1 will be truly normal, and one will be our data... If you can spot the one with our data, then it is different enough to be noticeable (from normal)
+  def_par <- par(mfrow=c(grid, grid), ask=FALSE) #create grid^2 plots: grid^2-1 will be truly normal, and one will be our data... If you can spot the one with our data, then it is different enough to be noticeable (from normal)
   loc_of_real_data <- sample(1:grid^2, size = 1)
   
   distractors <- list()
@@ -30,4 +30,5 @@ check_norm <- function(resid, grid=3){
     } else if(i==loc_of_real_data)
       qqnorm(resid, col="red")
   }
+  par(mfrow=def_par)
 }
