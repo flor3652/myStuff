@@ -4,8 +4,7 @@
 \alias{dpsl}
 \title{Dput Select.list Shortcut}
 \usage{
-dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, quotes = TRUE,
-  ...)
+dpsl(df, ind = "col", multiple = TRUE, graphics = TRUE, quotes = TRUE, ...)
 }
 \arguments{
 \item{df}{The data frame that the list should come from}

@@ -3,7 +3,6 @@
 \docType{package}
 \name{myStuff}
 \alias{myStuff}
-\alias{myStuff-package}
 \title{My Stuff}
 \arguments{
 \item{keep}{The keep function was designed to work in much the same was as rm, save to keep objects as opposed to removing them.}
